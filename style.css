@@ -235,6 +235,56 @@ ul {
     width: 100%;
 }
 
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* Reviews Read More */
+.review-text-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.review-text-content.expanded {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+}
+
+/* Map Section */
+.map-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
 /* Banner/Hero Section */
 .banner-section {
     background: 
@@ -269,55 +319,195 @@ ul {
     left: -150px;
 }
 
-.hero {
+.hero-new {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--text-color);
     padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hero-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.hero-new .hero-container {
     position: relative;
     z-index: 10;
-}
-
-.hero-text h1 {
-    font-size: 4rem;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-}
-
-.hero-text h1 span {
-    color: #ffd8eb;
-    /* Lightened version of bg color for contrast */
-    font-style: italic;
-}
-
-.hero-text p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-}
-
-.hero-buttons {
+    text-align: center;
+    max-width: 800px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 2rem;
+    font-family: var(--font-body);
+}
+
+.hero-tag i {
+    color: var(--accent-color);
+}
+
+.hero-title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white); 
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    font-family: var(--font-heading);
+}
+
+.hero-title .hero-highlight {
+    color: var(--accent-color);
+    font-style: normal;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.85); 
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+    font-family: var(--font-body);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.main-img {
+.btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color); 
+    color: var(--white);
+    padding: 1rem 2.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-dark:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(216, 70, 143, 0.3);
+}
+
+.btn-dark::after {
+    content: "\f061";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 0.5rem;
+    font-size: 0.9em;
+}
+
+.btn-light-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 1rem 2.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+}
+
+.btn-light-outline:hover {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+/* Review Input Field */
+.review-input-field {
     width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: var(--shadow-lg);
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    outline: none;
+    transition: var(--transition);
+    background-color: var(--white);
+    color: var(--text-color);
 }
 
-.main-img:hover {
-    box-shadow: 0 20px 40px rgba(216, 70, 143, 0.2);
+.review-input-field::placeholder {
+    color: #9ca3af;
+}
+
+.review-input-field:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(216, 70, 143, 0.2);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    .hero-new {
+        min-height: 80vh;
+    }
 }
 
 /* Services Section */
@@ -766,61 +956,21 @@ ul.pricing-features i {
     background-color: var(--bg-color);
 }
 
-/* Scrolling Review Wall Layout */
-.scrolling-reviews-container {
-    display: flex;
-    gap: 1.5rem;
-    height: 600px; /* Fixed height for the scrolling window */
-    overflow: hidden;
-    position: relative;
-    /* Optional mask to fade top and bottom edges smoothly */
-    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    transition: max-height 0.5s ease-in-out;
 }
 
-.scrolling-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
+.review-card.hidden-review {
+    display: none;
 }
 
-.scrolling-track {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.scrolling-track:hover {
-    animation-play-state: paused;
-}
-
-/* Duplicating the cards within the track gives it 200% height.
-   Scroll Up: moves from Y=0 to Y=-50% */
-.track-up {
-    animation-name: scrollUp;
-    animation-duration: 35s; 
-}
-
-/* Scroll Down: moves from Y=-50% to Y=0 */
-.track-down {
-    animation-name: scrollDown;
-    animation-duration: 38s;
-    /* initial state offset */
-    transform: translateY(-50%);
-}
-
-@keyframes scrollUp {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
-}
-
-@keyframes scrollDown {
-    0% { transform: translateY(-50%); }
-    100% { transform: translateY(0); }
+.show-more-reviews.active .review-card.hidden-review {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .review-card {
@@ -995,13 +1145,6 @@ ul.pricing-features i {
         justify-content: center;
     }
 
-    .scrolling-reviews-container {
-        gap: 1rem;
-    }
-    
-    .scrolling-column:nth-child(4) {
-        display: none; /* Hide 4th column on medium screens */
-    }
 
     .footer-container {
         grid-template-columns: 1fr 1fr;
@@ -1009,18 +1152,49 @@ ul.pricing-features i {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(249, 223, 234, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         display: none;
-        /* In a real app, this would be a hamburger menu */
+        gap: 1.5rem;
+        align-items: center;
+        border-bottom: 2px solid var(--accent-color);
+    }
+    .nav-content.active {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .map-container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 1.5rem !important;
+    }
+    .map-embed {
+        height: 300px !important;
     }
 
     .section-header h2 {
         font-size: 2rem;
     }
 
-    .scrolling-column:nth-child(3) {
-        display: none; /* Hide 3rd column on small screens */
-    }
 
     .footer-container {
         grid-template-columns: 1fr;
