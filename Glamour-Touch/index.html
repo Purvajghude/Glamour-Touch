@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamour Touch | Beauty Academy </title>
+    <meta name="description"
+        content="Experience premium beauty training at Glamour Touch. We offer professional classes in hair styling, makeup, skincare, and more.">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                <!-- Developer Note: To use a custom image logo, uncomment the img tag below and remove the i tag -->
+                <!-- <img src="logo.png" alt="Glamour Touch Logo" style="height: 1.8rem; width: auto; display: block;" class="custom-logo"> -->
+                <i class="fa-solid fa-spa" style="color: var(--accent-color); font-size: 1.4rem;"></i>Glamour
+                <span>Touch</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Classes</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#book" class="btn btn-outline">Enroll Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner Section -->
+        <section id="home" class="hero banner-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Master the Art of <span>Beauty</span></h1>
+                    <p>Step into a world of elegance and skill. Our expert instructors are dedicated to
+                        helping you master professional beauty techniques.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20a%20class!"
+                            target="_blank" class="btn btn-primary">Enroll in a Class</a>
+                        <a href="#services" class="btn btn-secondary">Explore Classes</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero.png" alt="Relaxing Spa Environment" class="main-img">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Curriculum Section -->
+        <section id="services" class="curriculum section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Signature Classes</h2>
+                    <p>World-class beauty training packages designed to elevate your career.
+                    </p>
+                </div>
+
+                <!-- Featured Master Course -->
+                <div class="pricing-card premium-card">
+                    <div class="premium-badge">Master</div>
+                    <div class="card-header">
+                        <h3>Complete Cosmetology Diploma</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>85,000<span class="period">/ 8 Months</span>
+                        </div>
+                        <p style="margin-top: 1rem;">Our master-level program encompassing Beauty Skills, Skin Aesthetics, Hair Colouring, Chemical Treatments, Hair Cutting, Makeup, and Hairstyling.</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Basic & Advanced Makeup Artistry</li>
+                            <li><i class="fas fa-check-circle"></i> Hair Cut & Advanced Chemical Treatments</li>
+                            <li><i class="fas fa-check-circle"></i> Skin Aesthetics & Deep Tissue Facials</li>
+                            <li><i class="fas fa-check-circle"></i> Complete Cosmetology Certification</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Complete%20Cosmetology%20Diploma!%20%0A*Duration%3A*%208%20Months%20%0A*Fees%3A*%20%E2%82%B985%2C000" target="_blank" class="btn btn-primary btn-full">Enroll Now</a>
+                    </div>
+                </div>
+
+                <!-- Category: Makeup & Skin -->
+                <div class="category-header">
+                    <h3>Makeup & Skin Sciences</h3>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Diploma In Makeup Artistry</h3>
+                            <div class="price">
+                                <span class="currency">₹</span>25,000<span class="period">/ 1 Month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check-circle"></i> HD & 3D Makeup Techniques</li>
+                                <li><i class="fas fa-check-circle"></i> Professional Airbrush Makeup</li>
+                                <li><i class="fas fa-check-circle"></i> Diverse Bridal Variations</li>
+                                <li><i class="fas fa-check-circle"></i> Advanced Color & Skin Theory</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Diploma%20In%20Makeup%20Artistry!%20%0A*Duration%3A*%201%20Month%20%0A*Fees%3A*%20%E2%82%B925%2C000" target="_blank" class="btn btn-outline btn-full">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Foundation Beauty Skills</h3>
+                            <div class="price">
+                                <span class="currency">₹</span>15,000<span class="period">/ 1 Month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check-circle"></i> Comprehensive Skin Analysis</li>
+                                <li><i class="fas fa-check-circle"></i> Classic Waxing & Massage</li>
+                                <li><i class="fas fa-check-circle"></i> Basic & Adv Manicure/Pedicure</li>
+                                <li><i class="fas fa-check-circle"></i> Professional Cleanup Techniques</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Foundation%20Beauty%20Skills%20course!%20%0A*Duration%3A*%201%20Month%20%0A*Fees%3A*%20%E2%82%B915%2C000" target="_blank" class="btn btn-outline btn-full">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Advance Skin Aesthetics</h3>
+                            <div class="price">
+                                <span class="currency">₹</span>15,000<span class="period">/ 1 Month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check-circle"></i> Ozon Steamer & High Frequency</li>
+                                <li><i class="fas fa-check-circle"></i> Galvanic & Ultrasonic Facials</li>
+                                <li><i class="fas fa-check-circle"></i> Medi Facial & Spray Toning</li>
+                                <li><i class="fas fa-check-circle"></i> Complete Body Polishing</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Advance%20Skin%20Aesthetics%20course!%20%0A*Duration%3A*%201%20Month%20%0A*Fees%3A*%20%E2%82%B915%2C000" target="_blank" class="btn btn-outline btn-full">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Hair Design -->
+                <div class="category-header">
+                    <h3>Hair Design & Chemistry</h3>
+                </div>
+                <div class="pricing-grid grid-4">
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3 style="font-size: 1.25rem;">Basic To Advance Hairstyle</h3>
+                            <div class="price">
+                                <span class="currency">₹</span>15,000<span class="period">/ 1 Month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check-circle"></i> Natural Texture Redefining</li>
+                                <li><i class="fas fa-check-circle"></i> Maharashtrian Khopa</li>
+                                <li><i class="fas fa-check-circle"></i> Sophisticated Curls</li>
+                                <li><i class="fas fa-check-circle"></i> Root Lift & Direction Setting</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Basic%20To%20Advance%20Hairstyle%20course!%20%0A*Duration%3A*%201%20Month%20%0A*Fees%3A*%20%E2%82%B915%2C000" target="_blank" class="btn btn-outline btn-full">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3 style="font-size: 1.25rem;">Hair Color Course</h3>
+                            <div class="price">
+                                <span class="currency">₹</span>8,000<span class="period">/ 1 Month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check-circle"></i> Ombre & Balayage</li>
+                                <li><i class="fas fa-check-circle"></i> Color Melt Techniques</li>
+                                <li><i class="fas fa-check-circle"></i> Neutralizing & Toning</li>
+                                <li><i class="fas fa-check-circle"></i> 3D & Global Fashion Colors</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Hair%20Color%20Course!%20%0A*Duration%3A*%201%20Month%20%0A*Fees%3A*%20%E2%82%B98%2C000" target="_blank" class="btn btn-outline btn-full">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3 style="font-size: 1.25rem;">Hair Chemical Course</h3>
+                            <div class="price">
+                                <span class="currency">₹</span>10,000<span class="period">/ 1 Month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check-circle"></i> Keratin Masterclass</li>
+                                <li><i class="fas fa-check-circle"></i> Nanoplastia & Botox</li>
+                                <li><i class="fas fa-check-circle"></i> Smoothening & Rebonding</li>
+                                <li><i class="fas fa-check-circle"></i> Plex Treatments & Spa</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Hair%20Chemical%20Course!%20%0A*Duration%3A*%201%20Month%20%0A*Fees%3A*%20%E2%82%B910%2C000" target="_blank" class="btn btn-outline btn-full">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3 style="font-size: 1.25rem;">Hair Cuts Technique</h3>
+                            <div class="price">
+                                <span class="currency">₹</span>10,000<span class="period">/ 1 Month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check-circle"></i> Graduation Cuts</li>
+                                <li><i class="fas fa-check-circle"></i> Long Layers & Texturizing</li>
+                                <li><i class="fas fa-check-circle"></i> Inverted Bob & Blunt Cuts</li>
+                                <li><i class="fas fa-check-circle"></i> Angles & Elevation Theory</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Hair%20Cuts%20Technique%20course!%20%0A*Duration%3A*%201%20Month%20%0A*Fees%3A*%20%E2%82%B910%2C000" target="_blank" class="btn btn-outline btn-full">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Parlour Classes</h2>
+                    <p>A glimpse into our professional beauty training sessions and student work.</p>
+                </div>
+                <input type="checkbox" id="gallery-toggle" class="gallery-toggle-checkbox">
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="hero.png" alt="Salon overview">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="class_hair.png" alt="Hair Styling Class">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="class_makeup.png" alt="Makeup Masterclass">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="class_nails.png" alt="Nail Art Session">
+                    </div>
+                    <!-- Extra images (hidden initially) -->
+                    <div class="gallery-item hidden-item">
+                        <img src="class_massage.png" alt="Spa and Massage Class">
+                    </div>
+                    <div class="gallery-item hidden-item">
+                        <img src="class_facial.png" alt="Facial Skincare Training">
+                    </div>
+                    <div class="gallery-item hidden-item">
+                        <img src="class_products.png" alt="Beauty Product Masterclass">
+                    </div>
+                    <div class="gallery-item hidden-item">
+                        <img src="class_hair2.png" alt="Advanced Hair Coloring">
+                    </div>
+                </div>
+
+                <div class="gallery-cta" style="text-align: center; margin-top: 3rem;">
+                    <label for="gallery-toggle" class="btn btn-outline gallery-toggle-btn">
+                        <span class="show-more">View More Photos</span>
+                        <span class="show-less">View Less Photos</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section banner-section">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="about.png" alt="Luxury Beauty Academy Interior" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h2>Meet Your Mentor, Urmila Tikare</h2>
+                    <p>Hello! My name is Urmila Tikare and I live in Navi Mumbai. I have over 20 years of experience in
+                        the beauty, bridal makeup, and hair industry. For the past 12 years, I have been successfully
+                        running my own salon business and beauty training classes. Through this career, I have
+                        experienced immense success and happiness in my life.</p>
+                    <p>Now, I want to share this knowledge and create the same career opportunities for others as well.
+                        That is why I have started these courses and this beauty platform. My wish is that everyone who
+                        has an interest in this field should come forward, learn, and achieve great success in their
+                        life.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Certified Expert Instructors</li>
+                        <li><i class="fas fa-check-circle"></i> Hands-on Practical Sessions</li>
+                        <li><i class="fas fa-check-circle"></i> Professional Certification</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta section">
+            <div class="container cta-container">
+                <h2>Ready for Your Beauty Career?</h2>
+                <p>Enroll in our classes today and let our experts guide you.</p>
+                <a href="#book" class="btn btn-primary btn-large">Enroll Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reviews Section -->
+    <section class="reviews section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Reviews</h2>
+                <p>See what our students and clients have to say about their experience.</p>
+            </div>
+
+            <div class="scrolling-reviews-container">
+                <!-- Column 1: Scrolls Up -->
+                <div class="scrolling-column">
+                    <div class="scrolling-track track-up">
+                        <!-- Original Content -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer1.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Sarah Jenkins</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The makeup masterclass completely transformed my career. The instructors are incredibly
+                                knowledgeable and supportive."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer3.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Maria Rodriguez</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"I took the advanced hair coloring class and it was fantastic. I feel so much more
+                                confident with complex techniques now."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--accent-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    AL
+                                </div>
+                                <div>
+                                    <h4>Amanda Lee</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"I loved the cozy environment and the one-on-one attention from the instructors."</p>
+                        </div>
+
+                        <!-- Duplicated Content for Seamless Scroll -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer1.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Sarah Jenkins</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The makeup masterclass completely transformed my career. The instructors are incredibly
+                                knowledgeable and supportive."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer3.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Maria Rodriguez</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"I took the advanced hair coloring class and it was fantastic. I feel so much more
+                                confident with complex techniques now."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--accent-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    AL
+                                </div>
+                                <div>
+                                    <h4>Amanda Lee</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"I loved the cozy environment and the one-on-one attention from the instructors."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Scrolls Down -->
+                <div class="scrolling-column">
+                    <div class="scrolling-track track-down">
+                        <!-- Original Content -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer2.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Emily Chen</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The best beauty academy in the city. The facilities are top-notch and the hands-on
+                                training is invaluable."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer4.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Jessica Taylor</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Highly recommend the spa and skincare modules. Very thorough curriculum and premium
+                                products used during training."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--banner-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    NP
+                                </div>
+                                <div>
+                                    <h4>Nina Patel</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The instructors make you feel capable and confident from day one. Best decision I made
+                                for my career."</p>
+                        </div>
+
+                        <!-- Duplicated Content for Seamless Scroll -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer2.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Emily Chen</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The best beauty academy in the city. The facilities are top-notch and the hands-on
+                                training is invaluable."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="reviewer4.png" alt="Reviewer" class="reviewer-img">
+                                <div>
+                                    <h4>Jessica Taylor</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Highly recommend the spa and skincare modules. Very thorough curriculum and premium
+                                products used during training."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--banner-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    NP
+                                </div>
+                                <div>
+                                    <h4>Nina Patel</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The instructors make you feel capable and confident from day one. Best decision I made
+                                for my career."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Scrolls Up -->
+                <div class="scrolling-column">
+                    <div class="scrolling-track track-up" style="animation-duration: 40s;">
+                        <!-- Original Content -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--footer-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    DK
+                                </div>
+                                <div>
+                                    <h4>Diana King</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"I attended the weekend nail artistry class. I was able to learn new skills while still
+                                working full-time. So flexible!"</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--text-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    SW
+                                </div>
+                                <div>
+                                    <h4>Samantha White</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"This academy is beautiful and the tools provided are top of the line. Excellent value."
+                            </p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--accent-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    RV
+                                </div>
+                                <div>
+                                    <h4>Rachel Vance</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Every class was structured wonderfully. From sanitation to practical application, I
+                                learned so much."</p>
+                        </div>
+
+                        <!-- Duplicated Content for Seamless Scroll -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--footer-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    DK
+                                </div>
+                                <div>
+                                    <h4>Diana King</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"I attended the weekend nail artistry class. I was able to learn new skills while still
+                                working full-time. So flexible!"</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--text-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    SW
+                                </div>
+                                <div>
+                                    <h4>Samantha White</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"This academy is beautiful and the tools provided are top of the line. Excellent value."
+                            </p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--accent-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    RV
+                                </div>
+                                <div>
+                                    <h4>Rachel Vance</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Every class was structured wonderfully. From sanitation to practical application, I
+                                learned so much."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: Scrolls Down -->
+                <div class="scrolling-column">
+                    <div class="scrolling-track track-down" style="animation-duration: 45s;">
+                        <!-- Original Content -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--banner-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    MT
+                                </div>
+                                <div>
+                                    <h4>Michelle Thomas</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Graduating from Glamour Touch opened so many doors for me. I immediately got hired at a
+                                top salon!"</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--accent-hover); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    CH
+                                </div>
+                                <div>
+                                    <h4>Chloe Hart</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"If you are thinking about starting a beauty career, this is the place to be. Phenomenal
+                                teachers."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--footer-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    LB
+                                </div>
+                                <div>
+                                    <h4>Lisa Brown</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The bridal makeup course was challenging but extremely rewarding. I'm now taking on my
+                                own clients."</p>
+                        </div>
+
+                        <!-- Duplicated Content for Seamless Scroll -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--banner-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    MT
+                                </div>
+                                <div>
+                                    <h4>Michelle Thomas</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Graduating from Glamour Touch opened so many doors for me. I immediately got hired at a
+                                top salon!"</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--accent-hover); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    CH
+                                </div>
+                                <div>
+                                    <h4>Chloe Hart</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"If you are thinking about starting a beauty career, this is the place to be. Phenomenal
+                                teachers."</p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-img"
+                                    style="background-color: var(--footer-color); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-family: var(--font-heading);">
+                                    LB
+                                </div>
+                                <div>
+                                    <h4>Lisa Brown</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"The bridal makeup course was challenging but extremely rewarding. I'm now taking on my
+                                own clients."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-cta" style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn btn-outline" style="min-width: 200px;">Add Your Review</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <!-- Developer Note: To use a custom image logo, uncomment the img tag below and remove the i tag -->
+                    <!-- <img src="logo.png" alt="Glamour Touch Logo" style="height: 1.8rem; width: auto; display: block;" class="custom-logo"> -->
+                    <i class="fa-solid fa-spa" style="color: #ffd8eb;"></i>Glamour <span>Touch</span>
+                </a>
+                <p>Empowering the next generation of beauty professionals.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Classes</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Shop No.11, Platinum Liviano, Sector-35, Plot No.58,
+                        Kamothe, Manasarovar Station, Navi Mumbai 410209</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 97693 21901 / +91 98707 77178</li>
+                    <li><i class="fas fa-envelope"></i> booking@glamourtouch.com</li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
+                <ul>
+                    <li>Mon - Fri: 9:00 AM - 8:00 PM</li>
+                    <li>Saturday: 10:00 AM - 6:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Glamour Touch Beauty Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
