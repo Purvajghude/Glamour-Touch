@@ -180,8 +180,13 @@ ul {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 1rem 0;
-    transition: var(--transition);
+    padding: 0.8rem 0;
+    transition: all 0.3s ease;
+}
+.navbar.scrolled {
+    padding: 0.3rem 0;
+    background: rgba(249, 223, 234, 0.95);
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-container {
@@ -204,6 +209,16 @@ ul {
     font-style: italic;
 }
 
+.custom-logo {
+    height: 5.5rem;
+    width: auto;
+    display: block;
+    transition: height 0.3s ease;
+}
+.navbar.scrolled .custom-logo {
+    height: 3.5rem;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -212,8 +227,10 @@ ul {
 .nav-links a {
     color: var(--text-color);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
     position: relative;
+    transition: color 0.3s ease;
 }
 
 .nav-links a::after {
@@ -239,6 +256,25 @@ ul {
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.nav-btn {
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(216, 70, 143, 0.2);
+}
+
+.nav-btn:hover {
+    background-color: var(--accent-hover);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(216, 70, 143, 0.35);
 }
 
 .menu-toggle {
@@ -503,10 +539,22 @@ ul {
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
     }
     .hero-new {
         min-height: 80vh;
+    }
+    .hero-subtitle {
+        font-size: 1.05rem;
+        padding: 0 1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+    .hero-actions .btn-dark, .hero-actions .btn-light-outline {
+        width: 100%;
     }
 }
 
@@ -1153,6 +1201,9 @@ ul.pricing-features i {
 }
 
 @media (max-width: 768px) {
+    .custom-logo {
+        height: 4rem;
+    }
     .menu-toggle {
         display: block;
     }
@@ -1161,14 +1212,15 @@ ul.pricing-features i {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--bg-color);
+        background: var(--white);
         flex-direction: column;
         padding: 2rem;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         display: none;
         gap: 1.5rem;
         align-items: center;
         border-bottom: 2px solid var(--accent-color);
+        z-index: 999;
     }
     .nav-content.active {
         display: flex;
@@ -1455,6 +1507,25 @@ ul.syllabus-list li::before {
     font-size: 1.2rem;
     color: var(--footer-color);
     background-color: var(--bg-color);
+}
+
+.course-select-dropdown {
+    width: 100%;
+    padding: 0.8rem;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--text-color);
+    border: 1px solid rgba(216, 70, 143, 0.4);
+    border-radius: 8px;
+    background-color: var(--white);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.course-select-dropdown:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(216, 70, 143, 0.2);
 }
 
 .comparison-table th:first-child {

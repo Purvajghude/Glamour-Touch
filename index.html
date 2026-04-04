@@ -18,7 +18,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo" style="display: flex; align-items: center; gap: 8px;">
-                <img src="Logocutom.png" alt="Glamour Touch Logo" style="height: 7rem; width: auto; display: block;" class="custom-logo">
+                <img src="Logocutom.png" alt="Glamour Touch Logo" class="custom-logo">
             </a>
             <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -529,47 +529,27 @@
                     <div class="category-header">
                         <h3>Compare Courses</h3>
                     </div>
-                    <p style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem;">Not sure which path to choose? Compare our most popular foundational courses side-by-side to find the right fit for your career.</p>
+                    <p style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem;">Select any two courses below to compare their features, pricing, and curriculum focus side-by-side.</p>
                     
                     <div class="comparison-table-container" style="overflow-x: auto;">
-                        <table class="comparison-table">
+                        <table class="comparison-table" id="course-comparison-table">
                             <thead>
                                 <tr>
                                     <th>Features</th>
-                                    <th>Foundation Beauty Skills</th>
-                                    <th>Advance Skin Aesthetics</th>
+                                    <th>
+                                        <select id="course-select-1" class="course-select-dropdown" aria-label="Select first course to compare">
+                                            <!-- populated via JS -->
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <select id="course-select-2" class="course-select-dropdown" aria-label="Select second course to compare">
+                                            <!-- populated via JS -->
+                                        </select>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Price</td>
-                                    <td><span class="currency">₹</span>15,000 <span class="period">/ 1 Month</span></td>
-                                    <td><span class="currency">₹</span>15,000 <span class="period">/ 1 Month</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Focus Area</td>
-                                    <td>Basic Skin, Cleanup, Manicure/Pedicure & Waxing</td>
-                                    <td>Advanced Machine Facials & Body Polishing</td>
-                                </tr>
-                                <tr>
-                                    <td>Key Techniques</td>
-                                    <td>Classic Massage, Blackhead Removal, Basic & Brazilian Waxing</td>
-                                    <td>Ozon Steamer, High Frequency, Galvanic, Ultrasonic</td>
-                                </tr>
-                                <tr>
-                                    <td>Ideal For</td>
-                                    <td>Beginners starting their beauty career</td>
-                                    <td>Professionals upgrading to advanced aesthetic machines</td>
-                                </tr>
-                                <tr>
-                                    <td>Action</td>
-                                    <td>
-                                        <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Foundation%20Beauty%20Skills%20course!" target="_blank" class="btn btn-outline btn-full" style="padding: 0.6rem 1rem;">Enroll Foundation</a>
-                                    </td>
-                                    <td>
-                                        <a href="https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Advance%20Skin%20Aesthetics%20course!" target="_blank" class="btn btn-outline btn-full" style="padding: 0.6rem 1rem;">Enroll Advanced</a>
-                                    </td>
-                                </tr>
+                                <!-- Populated dynamically by JS -->
                             </tbody>
                         </table>
                     </div>
@@ -785,7 +765,7 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="#" class="logo footer-logo" style="display: inline-flex; align-items: center; gap: 8px;">
-                    <img src="Logocutom.png" alt="Glamour Touch Logo" style="height: 7rem; width: auto; display: block;" class="custom-logo">
+                    <img src="Logocutom.png" alt="Glamour Touch Logo" class="custom-logo">
                 </a>
                 <p>Empowering the next generation of beauty professionals.</p>
                 <div class="social-links">
@@ -1024,6 +1004,156 @@
                 }
             });
         });
+
+        // Shrinking Navbar on Scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Dynamic Course Comparison Logic
+        const courseData = {
+            "foundation": {
+                name: "Foundation Beauty Skills",
+                price: "15,000",
+                period: "1 Month",
+                focus: "Basic Skin, Cleanup, Manicure/Pedicure & Waxing",
+                techniques: "Classic Massage, Blackhead Removal, Basic/Brazilian Waxing",
+                idealFor: "Beginners starting their beauty career",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Foundation%20Beauty%20Skills%20course!"
+            },
+            "advance-skin": {
+                name: "Advance Skin Aesthetics",
+                price: "15,000",
+                period: "1 Month",
+                focus: "Advanced Machine Facials & Body Polishing",
+                techniques: "Ozon Steamer, High Frequency, Galvanic, Ultrasonic",
+                idealFor: "Professionals upgrading to advanced aesthetic machines",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Advance%20Skin%20Aesthetics%20course!"
+            },
+            "master": {
+                name: "Complete Cosmetology Diploma",
+                price: "85,000",
+                period: "8 Months",
+                focus: "Master-level program covering all beauty & hair disciplines",
+                techniques: "Advanced Makeup, Hair Cutting & Chemicals, Skin Aesthetics",
+                idealFor: "Those wanting a complete, professional cosmetology career",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Complete%20Cosmetology%20Diploma!"
+            },
+            "makeup": {
+                name: "Diploma In Makeup Artistry",
+                price: "25,000",
+                period: "1 Month",
+                focus: "Professional makeup artistry & bridal variations",
+                techniques: "HD & 3D Makeup, Airbrush, Color Theory, Media Makeup",
+                idealFor: "Aspiring professional makeup artists & bridal specialists",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Diploma%20In%20Makeup%20Artistry!"
+            },
+            "hair-basic": {
+                name: "Basic To Advance Hairstyle",
+                price: "15,000",
+                period: "1 Month",
+                focus: "Professional hairstyling, open styles & traditional buns",
+                techniques: "Natural Texture Redefining, Maharashtrian Khopa, Sophisticated Curls",
+                idealFor: "Stylists wanting to master event & bridal hairstyling",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Basic%20To%20Advance%20Hairstyle%20course!"
+            },
+            "hair-color": {
+                name: "Hair Color Course",
+                price: "8,000",
+                period: "1 Month",
+                focus: "Color theory, formulation and application techniques",
+                techniques: "Ombre, Balayage, Color Melt, 3D Coloring, Neutralizing",
+                idealFor: "Hairdressers specializing in creative & fashion hair coloring",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Hair%20Color%20Course!"
+            },
+            "hair-chem": {
+                name: "Hair Chemical Course",
+                price: "10,000",
+                period: "1 Month",
+                focus: "Transformative chemical hair treatments & texturizing",
+                techniques: "Keratin, Nanoplastia, Botox, Smoothening, Rebonding",
+                idealFor: "Salons offering permanent straightening & smoothing services",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Hair%20Chemical%20Course!"
+            },
+            "hair-cuts": {
+                name: "Hair Cuts Technique",
+                price: "10,000",
+                period: "1 Month",
+                focus: "Precision hair cutting theory & diverse styles",
+                techniques: "Graduation Cuts, Long Layers, Inverted Bob, Angles Theory",
+                idealFor: "Professionals mastering foundational to advanced haircuts",
+                enrollUrl: "https://wa.me/919625091214?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Hair%20Cuts%20Technique%20course!"
+            }
+        };
+
+        const select1 = document.getElementById('course-select-1');
+        const select2 = document.getElementById('course-select-2');
+        const tableBody = document.querySelector('#course-comparison-table tbody');
+
+        // Populate dropdowns
+        if (select1 && select2) {
+            Object.keys(courseData).forEach(key => {
+                const opt1 = document.createElement('option');
+                opt1.value = key;
+                opt1.text = courseData[key].name;
+                select1.add(opt1);
+
+                const opt2 = document.createElement('option');
+                opt2.value = key;
+                opt2.text = courseData[key].name;
+                select2.add(opt2);
+            });
+
+            // Set default selections
+            select1.value = 'foundation';
+            select2.value = 'advance-skin';
+
+            // Function to render table
+            const renderTable = () => {
+                const c1 = courseData[select1.value];
+                const c2 = courseData[select2.value];
+
+                tableBody.innerHTML = `
+                    <tr>
+                        <td>Price</td>
+                        <td><span class="currency">₹</span>${c1.price} <span class="period">/ ${c1.period}</span></td>
+                        <td><span class="currency">₹</span>${c2.price} <span class="period">/ ${c2.period}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Focus Area</td>
+                        <td>${c1.focus}</td>
+                        <td>${c2.focus}</td>
+                    </tr>
+                    <tr>
+                        <td>Key Techniques</td>
+                        <td>${c1.techniques}</td>
+                        <td>${c2.techniques}</td>
+                    </tr>
+                    <tr>
+                        <td>Ideal For</td>
+                        <td>${c1.idealFor}</td>
+                        <td>${c2.idealFor}</td>
+                    </tr>
+                    <tr>
+                        <td>Action</td>
+                        <td><a href="${c1.enrollUrl}" target="_blank" class="btn btn-primary btn-full" style="padding: 0.6rem 1rem;">Enroll Now</a></td>
+                        <td><a href="${c2.enrollUrl}" target="_blank" class="btn btn-primary btn-full" style="padding: 0.6rem 1rem;">Enroll Now</a></td>
+                    </tr>
+                `;
+            };
+
+            // Render initially
+            renderTable();
+
+            // Render on change
+            select1.addEventListener('change', renderTable);
+            select2.addEventListener('change', renderTable);
+        }
     </script>
 </body>
 
